@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from typing import Optional
+from typing import Optional 
 
 class TaskBase(BaseModel):
     name: str
@@ -11,6 +11,6 @@ class TaskCreate(TaskBase):
 
 class Task(TaskBase):
     id: int
-
+     
     class Config:
         orm_mode = True
