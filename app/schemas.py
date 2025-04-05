@@ -1,20 +1,16 @@
-from pydoc import stripid
 from pydantic import BaseModel
-from  typing import Optional
-
-
+from typing import Optional
 
 class TaskBase(BaseModel):
-    Name:str
-    Priority:str
-    Deadline:str
-    
+    name: str
+    priority: str
+    deadline: str
+
 class TaskCreate(TaskBase):
     pass
 
 class Task(TaskBase):
-    Id:int
+    id: int
+
     class Config:
-        orm_mode:True
-
-
+        orm_mode = True

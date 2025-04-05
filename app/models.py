@@ -7,8 +7,8 @@ class Task(Base):
     
     __tablename__="Tasks"
     id=Column(Integer,primary_key=True,index=True)
-    Name=Column(String,index=True)
+    name=Column(String,index=True)
     priority =Column(String,default="Medium")
-    Deadline =Column(String,default="No deadline")
-    Status =Column(String,default="Pending")
+    deadline =Column(String,default="No deadline")
+    status =Column(String,default="Pending")
     
