@@ -1,14 +1,14 @@
 from email.policy import default
-from sqlalchemy import column,Integer,string
-from database import base
+from sqlalchemy import Column, Integer, String
+from .database import Base
 
 
-class Task(base):
+class Task(Base):
     
     __tablename__="Tasks"
-    id=column(Integer,primary_key=True,index=True)
-    Name=column(string,index=True)
-    priority =column(string,default="Medium")
-    Deadline =column(string,default="No deadline")
-    Status =column(string,default="Pending")
+    id=Column(Integer,primary_key=True,index=True)
+    Name=Column(String,index=True)
+    priority =Column(String,default="Medium")
+    Deadline =Column(String,default="No deadline")
+    Status =Column(String,default="Pending")
     

@@ -9,7 +9,7 @@ class TaskBase(BaseModel):
     Priority:str
     Deadline:str
     
-class TaskCreated(TaskBase):
+class TaskCreate(TaskBase):
     pass
 
 class Task(TaskBase):
